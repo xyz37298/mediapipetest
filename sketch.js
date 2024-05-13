@@ -41,7 +41,7 @@ function preprocessInput(imageElement) {
   // Preprocess the video input
   return tf.tidy(() => {
     return tf.browser.fromPixels(imageElement)
-      .resizeNearestNeighbor([224, 224]) // Example size, adjust according to model needs
+      .resizeNearestNeighbor([30, 99]) // Example size, adjust according to model needs
       .toFloat()
       .div(tf.scalar(255.0))
       .expandDims();
