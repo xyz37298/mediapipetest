@@ -7,7 +7,7 @@ let videoReady = false;
 async function preload() {
   video = createCapture(VIDEO, videoLoaded);
   video.hide();
-  model = await tf.loadLayersModel('model.json');
+  model = await tf.loadLayersModel('https://xyz37298.github.io/mediapipetest/model.json');
   console.log("Custom model initialized.");
   statusText = "Custom Model loaded.";
 }
